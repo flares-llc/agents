@@ -4,7 +4,7 @@
 
 ## 最新バージョン
 
-- 最新: `v0.0.10`
+- 最新: `v0.0.11`
 - 構成: ルート直下（versioned folder ではなく展開済み）
 
 ## インストール方法
@@ -74,6 +74,7 @@ npm run guard:verify:deterministic
 
 ## リリース一覧
 
+- [v0.0.11](https://github.com/flares-llc/agents/releases/tag/v0.0.11)
 - [v0.0.10](https://github.com/flares-llc/agents/releases/tag/v0.0.10)
 - [v0.0.9](https://github.com/flares-llc/agents/releases/tag/v0.0.9)
 - [v0.0.8](https://github.com/flares-llc/agents/releases/tag/v0.0.8)

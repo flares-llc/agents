@@ -21,6 +21,8 @@ function createFixture() {
   writeFile(path.join(packageRoot, 'README.md'), 'package readme\n');
   writeFile(path.join(packageRoot, 'AGENTS.md'), 'agents\n');
   writeFile(path.join(packageRoot, 'docs', 'guide.md'), 'docs\n');
+  writeFile(path.join(packageRoot, '.github', 'workflows', 'publish-npm.yml'), 'publish workflow\n');
+  writeFile(path.join(packageRoot, '.github', 'workflows', 'quality-gates.yml'), 'quality workflow\n');
 
   fs.mkdirSync(targetRoot, { recursive: true });
 
@@ -39,6 +41,11 @@ test('skip policy preserves existing files and copies missing files', () => {
 
   assert.equal(fs.readFileSync(path.join(fixture.targetRoot, 'README.md'), 'utf8'), 'existing\n');
   assert.equal(fs.readFileSync(path.join(fixture.targetRoot, 'AGENTS.md'), 'utf8'), 'agents\n');
+  assert.equal(
+    fs.readFileSync(path.join(fixture.targetRoot, '.github', 'workflows', 'quality-gates.yml'), 'utf8'),
+    'quality workflow\n'
+  );
+  assert.equal(fs.existsSync(path.join(fixture.targetRoot, '.github', 'workflows', 'publish-npm.yml')), false);
   assert.ok(result.events.skipped.some((filePath) => filePath.endsWith('README.md')));
   assert.ok(result.events.copied.some((filePath) => filePath.endsWith('AGENTS.md')));
 });

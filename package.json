@@ -1,6 +1,6 @@
 {
   "name": "@flares-llc/agents",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Snapshot assets for agent operations (agents, prompts, skills, scripts)",
   "private": false,
   "type": "commonjs",
