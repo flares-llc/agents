@@ -1,0 +1,9 @@
+{
+  "name": "pre-tool-use-guardrails",
+  "description": "Block destructive shell operations and enforce fail-closed QA behavior before tool execution.",
+  "trigger": "PreToolUse",
+  "action": {
+    "type": "command",
+    "command": "./scripts/qa/hook-pre-tool-guardrails.sh"
+  }
+}

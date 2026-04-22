@@ -1,0 +1,9 @@
+{
+  "name": "post-tool-use-qa-router",
+  "description": "Route changed files to required QA skills and ensure artifact context is initialized.",
+  "trigger": "PostToolUse",
+  "action": {
+    "type": "command",
+    "command": "./scripts/qa/hook-post-tool-qa-router.sh"
+  }
+}

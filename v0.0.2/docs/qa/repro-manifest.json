@@ -1,0 +1,158 @@
+{
+  "version": "1.1.0",
+  "description": "Reproducible QA customization blueprint fetched via GitHub MCP",
+  "source": {
+    "repo": "flares-llc/kihoku-apps",
+    "ref": "main"
+  },
+  "profile": "full",
+  "allowlistRoots": [
+    ".github/agents/",
+    ".github/instructions/",
+    ".github/prompts/",
+    ".github/skills/",
+    ".github/hooks/",
+    ".vscode/",
+    "AGENTS.md"
+  ],
+  "targets": [
+    {
+      "sourcePath": "AGENTS.md",
+      "targetPath": "AGENTS.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".vscode/mcp.json",
+      "targetPath": ".vscode/mcp.json",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/instructions/quality-gates.instructions.md",
+      "targetPath": ".github/instructions/quality-gates.instructions.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/prompts/autonomous-quality-ecosystem.prompt.md",
+      "targetPath": ".github/prompts/autonomous-quality-ecosystem.prompt.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/prompts/rebuild-qa-ecosystem-from-github.prompt.md",
+      "targetPath": ".github/prompts/rebuild-qa-ecosystem-from-github.prompt.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/agents/MEMORY-template.md",
+      "targetPath": ".github/agents/MEMORY-template.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/agents/coordinator.agent.md",
+      "targetPath": ".github/agents/coordinator.agent.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/agents/deployer.agent.md",
+      "targetPath": ".github/agents/deployer.agent.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/agents/detector.agent.md",
+      "targetPath": ".github/agents/detector.agent.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/agents/router.agent.md",
+      "targetPath": ".github/agents/router.agent.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/agents/writer.agent.md",
+      "targetPath": ".github/agents/writer.agent.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/agents/solver.agent.md",
+      "targetPath": ".github/agents/solver.agent.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/hooks/pre-tool-use.guardrails.json",
+      "targetPath": ".github/hooks/pre-tool-use.guardrails.json",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/hooks/post-tool-use.qa-router.json",
+      "targetPath": ".github/hooks/post-tool-use.qa-router.json",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/skills/solver-zero-risk-test-design/SKILL.md",
+      "targetPath": ".github/skills/solver-zero-risk-test-design/SKILL.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/skills/solver-design-guardrails/SKILL.md",
+      "targetPath": ".github/skills/solver-design-guardrails/SKILL.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/skills/solver-security-audit/SKILL.md",
+      "targetPath": ".github/skills/solver-security-audit/SKILL.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/skills/solver-performance-architecture-audit/SKILL.md",
+      "targetPath": ".github/skills/solver-performance-architecture-audit/SKILL.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/skills/solver-frontend-wcag-audit/SKILL.md",
+      "targetPath": ".github/skills/solver-frontend-wcag-audit/SKILL.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/skills/solver-frontend-validation-error-audit/SKILL.md",
+      "targetPath": ".github/skills/solver-frontend-validation-error-audit/SKILL.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/skills/solver-frontend-accessibility-validation-audit/SKILL.md",
+      "targetPath": ".github/skills/solver-frontend-accessibility-validation-audit/SKILL.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/skills/solver-crud-ui-detection/SKILL.md",
+      "targetPath": ".github/skills/solver-crud-ui-detection/SKILL.md",
+      "kind": "file",
+      "required": true
+    },
+    {
+      "sourcePath": ".github/skills/solver-test-authoring/SKILL.md",
+      "targetPath": ".github/skills/solver-test-authoring/SKILL.md",
+      "kind": "file",
+      "required": true
+    }
+  ]
+}
