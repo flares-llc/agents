@@ -112,6 +112,7 @@
 - テスト作成時のガードレール: .github/skills/solver-test-authoring/SKILL.md
 - コミット作成: .github/skills/writer-commit-management/SKILL.md
    - 実行規約: コミット作業は `writer` エージェントを呼び出し、コミット件名は日本語を必須とする
+- コミットメッセージ作成ガイド: .github/instructions/commit-instructions.md
 - リリース作成/ノート更新: .github/skills/writer-release-management/SKILL.md
    - 実行規約: リリース作業は `writer` エージェントを呼び出して実施する
    - 追加規約: リリース前に README/docs/AGENTS のブラッシュアップを必須実施する
