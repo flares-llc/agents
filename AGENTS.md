@@ -110,6 +110,8 @@
 ## 利用者向けスキル参照
 - 設計時のガードレール: .github/skills/solver-design-guardrails/SKILL.md
 - テスト作成時のガードレール: .github/skills/solver-test-authoring/SKILL.md
+- コミット作成: .github/skills/writer-commit-management/SKILL.md
+   - 実行規約: コミット作業は `writer` エージェントを呼び出し、コミット件名は日本語を必須とする
 - リリース作成/ノート更新: .github/skills/writer-release-management/SKILL.md
    - 実行規約: リリース作業は `writer` エージェントを呼び出して実施する
 - 参照ガイド: docs/skills/README.md

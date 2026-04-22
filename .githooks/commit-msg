@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+msg_file="$1"
+subject_line="$(head -n 1 "$msg_file")"
+
+# Allow automated merge/revert messages produced by git.
+if [[ "$subject_line" =~ ^Merge\  ]] || [[ "$subject_line" =~ ^Revert\  ]]; then
+  exit 0
+fi
+
+# Require at least one Japanese character in the subject line.
+if ! printf '%s' "$subject_line" | grep -Eq '[ぁ-んァ-ン一-龯]'; then
+  echo "[commit-msg] エラー: コミット件名は日本語を含めてください。" >&2
+  echo "[commit-msg] 例: feat: コミット作成スキルを追加" >&2
+  exit 1
+fi
