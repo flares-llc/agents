@@ -18,6 +18,7 @@
   - 目的: `gh` コマンドで Release 作成と Release Notes 更新を標準化する。
   - 主な利用場面: バージョンリリース作成、既存リリースノート更新。
   - 運用ルール: Release作業は必ず `writer` エージェントを呼び出し、本スキルを適用して実施する。
+  - 追加規約: リリース前に `README.md` / `docs/**` / `AGENTS.md` をブラッシュアップし、差分または確認結果を残す。
 
 ## コミット運用時に使うスキル
 - `.github/skills/writer-commit-management/SKILL.md`

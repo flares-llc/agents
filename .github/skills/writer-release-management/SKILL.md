@@ -11,6 +11,7 @@ description: "Writer が gh コマンドで GitHub Release を作成し、リリ
 ## Mandatory Invocation Contract
 - リリース作成またはリリースノート更新を行う場合、必ず `writer` エージェントを呼び出して本スキルを適用する。
 - `writer` を経由せずに `gh release create` / `gh release edit` を直接実行して完了扱いにしない。
+- リリース前にドキュメントブラッシュアップ（README / docs / AGENTS / skillsガイド）を必須で実施する。
 
 ## When To Use
 - 新しいバージョンタグで Release を作成するとき
@@ -24,14 +25,19 @@ description: "Writer が gh コマンドで GitHub Release を作成し、リリ
    - `gh release list --limit 20`
 3. 対象 Release の現状本文を確認する。
    - `gh release view <tag> --json tagName,name,body,url`
+4. ドキュメントブラッシュアップを実施する。
+   - 対象: `README.md` / `docs/**` / `AGENTS.md` / `docs/skills/README.md`
+   - 観点: 最新版表記、リンク切れ、セットアップ手順、変更点説明の鮮度
+   - 証跡: `git diff -- README.md docs AGENTS.md` で差分確認（差分がなければ確認済みとして記録）
 
 ## Execution Steps
-1. リリース本文を下書きする（テンポラリファイル推奨）。
-2. 新規作成時:
+1. ドキュメントブラッシュアップ結果を反映する（必要な修正をコミット済みにする）。
+2. リリース本文を下書きする（テンポラリファイル推奨）。
+3. 新規作成時:
    - `gh release create <tag> --title "<title>" --notes-file <notes-file>`
-3. 更新時:
+4. 更新時:
    - `gh release edit <tag> --notes-file <notes-file>`
-4. 反映確認:
+5. 反映確認:
    - `gh release view <tag> --json tagName,name,body,url,isDraft,isPrerelease`
 
 ## Release Notes Template
@@ -51,11 +57,16 @@ description: "Writer が gh コマンドで GitHub Release を作成し、リリ
 
 ### Upgrade Notes
 - ...
+
+### Documentation Polish
+- README/docs の更新有無と要約
+- 主要リンク確認結果
 ```
 
 ## Quality Gates
 - タグと Release の不整合がない。
 - ノートに最低限 `Highlights` / `Main Changes` / `Included Commits` / `Upgrade Notes` がある。
+- リリース前ドキュメントブラッシュアップの結果が確認できる（差分または確認記録）。
 - 公開状態（draft / prerelease）の意図が明示されている。
 - 実行コマンドと確認結果（URL）を証跡として残す。
 
@@ -67,4 +78,5 @@ description: "Writer が gh コマンドで GitHub Release を作成し、リリ
 ## Done Criteria
 - 対象 Release が期待するタグ・タイトル・公開状態で存在する。
 - リリースノートがテンプレート要件を満たし、最新内容に更新されている。
+- ドキュメントブラッシュアップの実施結果が記録されている。
 - `gh release view` の確認結果を提示できる。
