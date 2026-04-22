@@ -13,10 +13,17 @@
   - 主な利用場面: failing test先行、結合試験、E2E品質ゲート運用。
   - 運用ルール: 機能変更時はテストを遅延なく同時更新し、新規実装時はUnit/E2Eを同時実装する。
 
+## リリース運用時に使うスキル
+- `.github/skills/writer-release-management/SKILL.md`
+  - 目的: `gh` コマンドで Release 作成と Release Notes 更新を標準化する。
+  - 主な利用場面: バージョンリリース作成、既存リリースノート更新。
+  - 運用ルール: Release作業は必ず `writer` エージェントを呼び出し、本スキルを適用して実施する。
+
 ## 利用の目安
 1. 設計を先に固めたいときは design-guardrails を使う。
 2. 修正に合わせてテストを作るときは test-authoring を使う。
-3. 両方必要なときは、設計 -> 実装/テストの順で併用する。
+3. Release作業は writer-release-management を使い、`writer` エージェント経由で実行する。
+4. 両方必要なときは、設計 -> 実装/テストの順で併用する。
 
 ## 境界判定（Design vs Test）
 - Design 先行
