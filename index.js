@@ -1,6 +1,6 @@
 'use strict';
 
 module.exports = {
-  name: '@flares-llc/agent-team-snapshots',
-  version: '0.0.7'
+  name: '@flares-llc/agents',
+  version: '0.0.8'
 };

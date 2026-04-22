@@ -1,13 +1,21 @@
-# agent-team-snapshots
+# FLARES AGENTS
 
 このリポジトリは、エージェント運用資産（agents / prompts / skills / scripts）のスナップショットをバージョン単位で管理します。
 
 ## 最新バージョン
 
-- 最新: `v0.0.7`
+- 最新: `v0.0.8`
 - 構成: ルート直下（versioned folder ではなく展開済み）
 
-## v0.0.7 のセットアップ（リポジトリ内完結）
+## インストール方法
+
+まずは npm コマンドでインストールします。
+
+```bash
+npm install @flares-llc/agents
+```
+
+## 手動セットアップ
 
 このリポジトリのルートを作業ルートにして実行します。
 
@@ -40,18 +48,13 @@ npm run guard:verify:deterministic
 
 ## リリース一覧
 
-- [v0.0.7](https://github.com/flares-llc/agent-team-snapshots/releases/tag/v0.0.7)
-- [v0.0.6](https://github.com/flares-llc/agent-team-snapshots/releases/tag/v0.0.6)
-- [v0.0.5](https://github.com/flares-llc/agent-team-snapshots/releases/tag/v0.0.5)
-- [v0.0.4](https://github.com/flares-llc/agent-team-snapshots/releases/tag/v0.0.4)
-- [v0.0.3](https://github.com/flares-llc/agent-team-snapshots/releases/tag/v0.0.3)
-- [v0.0.2](https://github.com/flares-llc/agent-team-snapshots/releases/tag/v0.0.2)
-
-## npm パッケージとして利用する
-
-```bash
-npm install @flares-llc/agent-team-snapshots
-```
+- [v0.0.8](https://github.com/flares-llc/agents/releases/tag/v0.0.8)
+- [v0.0.7](https://github.com/flares-llc/agents/releases/tag/v0.0.7)
+- [v0.0.6](https://github.com/flares-llc/agents/releases/tag/v0.0.6)
+- [v0.0.5](https://github.com/flares-llc/agents/releases/tag/v0.0.5)
+- [v0.0.4](https://github.com/flares-llc/agents/releases/tag/v0.0.4)
+- [v0.0.3](https://github.com/flares-llc/agents/releases/tag/v0.0.3)
+- [v0.0.2](https://github.com/flares-llc/agents/releases/tag/v0.0.2)
 
 ## GitHub Actions で npm 公開する
 
